@@ -9,10 +9,10 @@
 
 
 ### 2-webhook.ipynb
-1. 最上位セルの `user_id` および `access_token` を入力する
+1. 最上位セルの`access_token`および`channel_secret`を入力する
     - 各種credntialsはLINE Developersのチャネル基本設定を参照
 1. 上から順にオウム返しセルまで実行する
-    - ブラウザ上で `http://127.0.0.1:5000/` にアクセスし、 `hello world!` と表示されるのを確認
+    - ブラウザ上で `http://127.0.0.1:5000/`にアクセスし、 `hello world!`と表示されるのを確認
 1. ターミナル上で下記コマンドを実行し、ローカルサーバーを起動する
     ```shell
     python -m http.server 5000
