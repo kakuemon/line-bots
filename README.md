@@ -41,3 +41,18 @@
         ```shell
         python -m http.server 5000
         ```
+
+## ライブラリについて
+- line-bot-sdk:
+    - PythonでLINE Messaging APIを使用するためのSDK(ソフトウェア開発キット）
+    - https://pypi.org/project/line-bot-sdk/
+    - https://github.com/line/line-bot-sdk-python
+- flask:
+    - Python用の軽量なWebアプリケーションフレームワーク
+    - WebサイトやWebアプリケーションを作るための機能を提供する
+    - https://pypi.org/project/Flask/
+    - https://a2c.bitbucket.io/flask/
+- requests:
+    - PythonのHTTP通信ライブラリ
+    - Webサイトの情報取得や画像の収集などを行うことができる
+    - https://requests-docs-ja.readthedocs.io/en/latest/
