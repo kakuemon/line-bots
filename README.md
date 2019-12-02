@@ -12,7 +12,7 @@
 
 1. 最上位セルの `!pip install line-bot-sdk` を実行しライブラリをインストール
     - このセルは1度実行すれば今後する必要はない
-1. ライブラリのインポートをし、LINE BOT APIにアクセス
+1. ライブラリをインポートし、LINE BOT APIにアクセス
 1. Send Messageのセルを実行
     - 変数textの値を送信
 1. Send Stampのセルを実行
