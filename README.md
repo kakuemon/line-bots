@@ -3,7 +3,7 @@
 ## SETUP
 
 ### credentials.jsonに `user_id`, `channel_secret` および `channel_access_token` を入力する
-#### 各種credntialsはLINE Developersのチャネル基本設定およびMessaging API設定を参照
+- 各種credntialsはLINE Developersのチャネル基本設定およびMessaging API設定を参照
 
 ## HOW TO USE
 
