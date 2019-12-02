@@ -72,3 +72,7 @@
     - PythonのHTTP通信ライブラリ
     - Webサイトの情報取得や画像の収集などを行うことができる
     - https://requests-docs-ja.readthedocs.io/en/latest/
+- pandas:
+    - Pythonでデータ解析を行うための機能を持ったライブラリで、数表や時系列データを操作するためのデータ構造を作ったり演算を行うことができる
+    - https://pypi.org/project/pandas/
+    - https://pandas.pydata.org/pandas-docs/stable/
