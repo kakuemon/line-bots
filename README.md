@@ -58,7 +58,7 @@
         python -m http.server 5000
         ```
 
-## ライブラリについて
+## Library
 - line-bot-sdk:
     - PythonでLINE Messaging APIを使用するためのSDK(ソフトウェア開発キット）
     - https://pypi.org/project/line-bot-sdk/
