@@ -1,12 +1,28 @@
 # LINE BOT
 
+## SETUP
+
+### credentials.jsonに `user_id`, `channel_secret` および `channel_access_token` を入力する
+#### 各種credntialsはLINE Developersのチャネル基本設定およびMessaging API設定を参照
+
 ## HOW TO USE
 
-### 1-messagingAPI.ipynb
-1. 最上位セルの `user_id` および `access_token` を入力する
-    - 各種credntialsはLINE Developersのチャネル基本設定を参照
-1. あとは各セルを実行するだけでメッセージを送信できる
+### 1-messagingAPI.ipynb    
+#### メッセージを送信するだけのノートブック
 
+1. 最上位セルの `!pip install line-bot-sdk` を実行しライブラリをインストール
+    - このセルは1度実行すれば今後する必要はない
+1. ライブラリのインポートをし、LINE BOT APIにアクセス
+1. Send Messageのセルを実行
+    - 変数textの値を送信
+1. Send Stampのセルを実行
+    - スタンプ送信
+1. Send Mapのセルを実行
+    - 地図を送信
+1. Get user profile
+    - ユーザーのプロフィールを取得
+1. Get followers
+    - フォロワーの数を取得
 
 ### 2-webhook.ipynb
 1. 最上位セルの`access_token`および`channel_secret`を入力する
