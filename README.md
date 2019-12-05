@@ -66,6 +66,7 @@
 1. 上記と同じように、全セルを実行し&ngrokを起動する
 1. LINE上で「おみくじ」と送ると、ランダムで運勢が返ってくる
 
+## CHALLENGE
 ### `src/`にいくつかソースコードを置いてあるので実装してみてください
 - train_api.py/train_api.ipynb
     - 電車の運行情報をゲットするコード
@@ -100,7 +101,7 @@
 1. ngrok起動してLINEで「山手線」とメッセージを送る
     - 山手線の運行情報が返ってくる
 
-## Library
+## LIBRARY
 - line-bot-sdk:
     - PythonでLINE Messaging APIを使用するためのSDK(ソフトウェア開発キット）
     - https://pypi.org/project/line-bot-sdk/
