@@ -101,7 +101,7 @@
 1. ngrok起動してLINEで「山手線」とメッセージを送る
     - 山手線の運行情報が返ってくる
 
-**weather_apiを使用する場合は、https://openweathermap.org/ のアカウント登録が必要です**
+\* **weather_apiを使用する場合は、https://openweathermap.org/ のアカウント登録が必要です**
 
 ## LIBRARY
 - line-bot-sdk:
