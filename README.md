@@ -24,10 +24,10 @@
 1. Get followers
     - フォロワーの数を取得
 
-### 2-webhook.ipynb
-1. 最上位セルの`access_token`および`channel_secret`を入力する
-    - 各種credntialsはLINE Developersのチャネル基本設定を参照
-1. 上から順にオウム返しセルまで実行する
+### 2-returnMessage.ipynb
+1. `Setup`以下の2つのセルを実行
+    - ライブラリのインポートとcredentilasの取得
+1. オウム返しセルを実行
     - ブラウザ上で `http://127.0.0.1:5000/`にアクセスし、 `hello world!`と表示されるのを確認
 1. ターミナル上でngrokを起動する
     ```shell
@@ -57,6 +57,48 @@
         ```shell
         python -m http.server 5000
         ```
+1. LINEからメッセージを送信
+    - 基本的にメッセージがそのまま返ってくる
+    - 「おはよう」と送ると、「おはようございます」と返ってくる
+    - 「スタンプ」と送ると、スタンプが送られてくる
+
+### 3-omikuji.ipynb
+1. 上記と同じように、全セルを実行し&ngrokを起動する
+1. LINE上で「おみくじ」と送ると、ランダムで運勢が返ってくる
+
+### `src/`にいくつかソースコードを置いてあるので実装してみてください
+- train_api.py/train_api.ipynb
+    - 電車の運行情報をゲットするコード
+    - `get_yamanote_line()`を呼び出すと山手線の運行情報がリアルタイムでゲットできる
+- weather_api.py/weather_api.ipynb
+    - 天気の情報をゲットするコード
+    - `get_weather()`を呼び出すとその日の天気予報がゲットできる
+
+#### train_apiを使用した実装例
+1. `2-returnMessage.ipynb`もしくは`3-omikuji.ipynb`を複製
+1. ライブラリのインポートとcredentialsの取得セルを実行
+1. 新規セルを追加
+1. `train_api.ipynb`内の`get_yamanote_line()`のセルをコピーする、もしくは`from src import train_api`を実行して`train_api.py`を呼び出して実行
+1. LINE BOTを実装するセルの`def handle_message(event)`内に以下のように記述
+    ```
+    def handle_message(event):
+        if event.message.text == "山手線":
+        
+            #ipynbファイルのセルをコピーして実行した場合
+            train_info = get_yamanote_line()
+            #        or
+            #pythonファイルをimportした場合
+            train_info = train_api.get_yamanote_line()
+
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=train_info)
+            )
+        else:
+           ...
+    ```
+1. ngrok起動してLINEで「山手線」とメッセージを送る
+    - 山手線の運行情報が返ってくる
 
 ## Library
 - line-bot-sdk:
