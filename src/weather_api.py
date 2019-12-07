@@ -7,9 +7,21 @@
 # In[ ]:
 
 
+import pandas as pd
+import requests
+
+def get_weather_api():
+    df = pd.read_json("../credentials.json")
+    weather_api = df["weather"]["api_key"]
+    return weather_api
+
+
+# In[ ]:
+
+
 def get_weather():
     city_name = "Tokyo"
-    API_KEY = ""
+    API_KEY = get_weather_api()
 
     url = f'http://api.openweathermap.org/data/2.5/weather?units=metric&q={city_name}&APPID={API_KEY}'
     response = requests.get(url)
@@ -40,4 +52,10 @@ def get_weather():
         weather['天気'] = '霧'
 
     return f'天気: {weather["天気"]}\n気温: {weather["気温"]}\n最低気温: {weather["最低気温"]}\n最高気温: {weather["最高気温"]}'
+
+
+# In[ ]:
+
+
+
 
